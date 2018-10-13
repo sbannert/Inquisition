@@ -54,7 +54,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         //determines whether our bool, grounded, is true or false by seeing if our groundcheck overlaps something on the ground layer
-        grounded = Physics.CheckBox(groundCheck.position, new Vector3(0.47f, 0.01f, 0.9f), new Quaternion(0f, 0f, 0f, 0f), whatIsGround);
+        grounded = Physics.CheckBox(groundCheck.position, new Vector3(0.47f, 0.1f, 0.9f), new Quaternion(0f, 0f, 0f, 0f), whatIsGround);
 
 
         //if we are grounded...
