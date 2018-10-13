@@ -5,7 +5,7 @@ public class HomingEnemyScript : MonoBehaviour {
     [SerializeField]
     GameObject player;
     [SerializeField]
-    float step;
+    float speed;
     [SerializeField]
     float moveDelay;
     float playerX;
@@ -20,6 +20,7 @@ public class HomingEnemyScript : MonoBehaviour {
         playerY = player.transform.position.y;
         playerZ = player.transform.position.z;
         toLocation = new Vector3(playerX, playerY, playerZ);
+        Debug.Log(toLocation);
         StartCoroutine(DelayTime());
 
     }
@@ -32,7 +33,10 @@ public class HomingEnemyScript : MonoBehaviour {
     private IEnumerator DelayTime()
     {
         yield return new WaitForSeconds(moveDelay);
-        Vector3.MoveTowards(transform.position, toLocation, step);  //This is the movement to be changed
+        for (int i = 0; i < 1000; i++)
+        {
+            transform.localPosition = Vector3.MoveTowards(transform.position, toLocation, Time.deltaTime * speed);  //This is the movement to be changed
+        }
     }
 
 }
