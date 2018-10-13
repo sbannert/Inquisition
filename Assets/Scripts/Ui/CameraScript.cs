@@ -8,11 +8,6 @@ public class CameraScript : MonoBehaviour {
     GameObject player;
     Vector3 offset;
 
-    private void Start()
-    {
-
-    }
-
     private void LateUpdate()
     {
         offset = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z - 10);
