@@ -1,42 +1,49 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HomingEnemyScript : MonoBehaviour {
-    [SerializeField]
-    GameObject player;
+    //[SerializeField]
+    Transform player;
+    GameObject temp;
     [SerializeField]
     float speed;
     [SerializeField]
     float moveDelay;
-    float playerX;
-    float playerY;
-    float playerZ;
-    Vector3 toLocation;
+    bool run;
 
 
     // Use this for initialization
     void Awake () {
-        playerX = player.transform.position.x;
-        playerY = player.transform.position.y;
-        playerZ = player.transform.position.z;
-        toLocation = new Vector3(playerX, playerY, playerZ);
-        Debug.Log(toLocation);
+        temp = GameObject.FindWithTag("Player");
+        player = temp.transform;
         StartCoroutine(DelayTime());
-
+        transform.LookAt(player);
+        run = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        //StartCoroutine(DelayTime());
+        if (run)
+        {
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
     }
 
     private IEnumerator DelayTime()
     {
         yield return new WaitForSeconds(moveDelay);
-        for (int i = 0; i < 1000; i++)
-        {
-            transform.localPosition = Vector3.MoveTowards(transform.position, toLocation, Time.deltaTime * speed);  //This is the movement to be changed
-        }
+        run = true;        
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        } else
+        {
+            Destroy(gameObject);
+        }        
+    }
 }

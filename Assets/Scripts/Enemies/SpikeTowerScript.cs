@@ -14,7 +14,6 @@ public class SpikeTowerScript : MonoBehaviour {
     [SerializeField]
     float spikeYChange;
     Vector3 vectLocation;
-    int count;
 
     // Update is called once per frame
     void Start () {
