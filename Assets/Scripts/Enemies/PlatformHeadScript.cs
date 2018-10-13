@@ -15,7 +15,6 @@ public class PlatformHeadScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
         if ((collision.gameObject.name == "Player") && (collision.transform.position.y > (transform.position.y+1.5f)) && (hasShrunk))
         {
             hasShrunk = false;
