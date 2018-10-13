@@ -8,25 +8,24 @@ public class HomingEnemyScript : MonoBehaviour {
     float step;
     [SerializeField]
     float moveDelay;
-    GameObject tempPlayer;
+    Transform tempPlayer;
 
 
     // Use this for initialization
     void Awake () {
-        tempPlayer = new GameObject("player");
+        GameObject tempPlayer = new GameObject("player");
         tempPlayer.transform.position = player.transform.position;
     }
 	
 	// Update is called once per frame
 	void Update () {
         StartCoroutine(DelayTime());
-	}
+    }
 
     private IEnumerator DelayTime()
     {
         yield return new WaitForSeconds(moveDelay);
-        transform.position = Vector3.MoveTowards(transform.position, tempPlayer.transform.position, 3);  //This is the movement to be changed
-
+        Vector3.MoveTowards(transform.position, tempPlayer.transform.position, step);  //This is the movement to be changed
     }
 
 }

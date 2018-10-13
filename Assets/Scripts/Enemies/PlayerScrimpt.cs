@@ -3,12 +3,10 @@
 public class PlayerScrimpt : MonoBehaviour {
 
     Rigidbody rb;
-    bool ninjaStarPhase;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        ninjaStarPhase = false;
     }
 
     // Update is called once per frame
