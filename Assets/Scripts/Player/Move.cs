@@ -74,7 +74,6 @@ public class Move : MonoBehaviour
         {
             idleAnimation.gameObject.SetActive(false); //These will be replaced by transitions
             moveAnimation.gameObject.SetActive(false);
-            glideAnimation.gameObject.SetActive(false);
             start = true;
         }
         if ((Input.GetButton("Jump")) && !stoppedJumping)
@@ -86,6 +85,7 @@ public class Move : MonoBehaviour
         if(Input.GetButtonUp("Jump"))
         {
             idleAnimation.gameObject.SetActive(false);
+            moveAnimation.gameObject.SetActive(false);
             end = true;
         }
         if (Input.GetButton("Glide"))
