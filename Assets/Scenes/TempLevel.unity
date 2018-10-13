@@ -534,7 +534,6 @@ Transform:
   - {fileID: 1197469037}
   - {fileID: 1102575370}
   - {fileID: 739194719}
-  - {fileID: 1598071141}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1134,6 +1133,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4598483164412142, guid: 1baad53dfd3a6674592c031f050fbf11,
     type: 2}
   m_PrefabInternal: {fileID: 1607867605}
+--- !u!1001 &1855853849
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 64.29585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.18790606
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4610306972376720, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7938d2d1aeb9e41b8916cf3f76146e4b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1887067981
 Prefab:
   m_ObjectHideFlags: 0
@@ -1279,3 +1320,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1562862583}
+--- !u!1001 &1989020125
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 15.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840255391753532, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6d9fd4df3cecf4c5f8dcaa6de0d828a7, type: 2}
+  m_IsPrefabAsset: 0
