@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57c06741ab4a86e4d83009f9a5593999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spikeTimer: 1
+  spikeTimer: 3
   spike: {fileID: 1866014959962218, guid: c40bf4ce8bd790043a928e2ec05356c7, type: 2}
   spikeHeight: 2
   spikeYChange: 1

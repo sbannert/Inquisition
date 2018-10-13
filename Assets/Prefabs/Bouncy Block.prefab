@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15045f9dea0dac54f91f60269903b4b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 0}
-  rb: {fileID: 0}
+  playerObj: {fileID: 4990690177396074, guid: 6d5ae20f1af27ec41b04b980e42d8168, type: 2}
+  rb: {fileID: 54789335585317532, guid: 6d5ae20f1af27ec41b04b980e42d8168, type: 2}

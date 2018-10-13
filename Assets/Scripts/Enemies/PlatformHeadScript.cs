@@ -17,7 +17,7 @@ public class PlatformHeadScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.name == "Temp Player") && (player.transform.position.y > transform.position.y) && (hasShrunk))
+        if ((collision.gameObject.name == "Player") && (collision.transform.position.y > transform.position.y) && (hasShrunk))
         {
             hasShrunk = false;
             StartCoroutine(DelayTime());
