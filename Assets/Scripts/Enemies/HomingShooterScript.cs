@@ -21,7 +21,7 @@ public class HomingShooterScript : MonoBehaviour {
         yield return new WaitForSeconds(shootDelay);
         GameObject homingObj = (GameObject)Instantiate(homing, vectLocation, transform.rotation);
         //spikeObj.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        //homingObj.transform.parent = transform;
+        homingObj.transform.parent = transform;
         Start();
     }
 
