@@ -109,4 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikeTow: {fileID: 0}
-  spikeDuration: 0.75
+  spikeDuration: 2
