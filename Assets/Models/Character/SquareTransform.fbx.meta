@@ -1,66 +1,25 @@
 fileFormatVersion: 2
-guid: b40bdc25a47fb0c46ad4f06c34dca6e5
+guid: 94742101b80064b9e8b040a1d21353a6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
-    100002: Axe
-    100004: Bone
-    100006: Bone_001
-    100008: Bone_002
-    100010: Bone_003
-    100012: Bone_004
-    100014: Bone_005
-    100016: Bone_006
-    100018: Bone_007
-    100020: Bone_008
-    100022: Bone_009
-    100024: Bone_010
-    100026: Bone_011
-    100028: Bone_012
-    100030: Bone_013
-    100032: Bone_014
-    100034: Bone_015
-    100036: Bone_016
-    100038: Cube
-    100040: Elbow
-    100042: Elbow_001
-    100044: Knee
-    100046: Knee_001
-    100048: //RootNode
-    400000: Armature
-    400002: Axe
-    400004: Bone
-    400006: Bone_001
-    400008: Bone_002
-    400010: Bone_003
-    400012: Bone_004
-    400014: Bone_005
-    400016: Bone_006
-    400018: Bone_007
-    400020: Bone_008
-    400022: Bone_009
-    400024: Bone_010
-    400026: Bone_011
-    400028: Bone_012
-    400030: Bone_013
-    400032: Bone_014
-    400034: Bone_015
-    400036: Bone_016
-    400038: Cube
-    400040: Elbow
-    400042: Elbow_001
-    400044: Knee
-    400046: Knee_001
-    400048: //RootNode
-    2100000: Material_001
-    4300000: Cube
-    7400000: Default Take
-    7400002: Attacking
-    7400004: Walking
+    100000: Camera
+    100002: Cube.000
+    100004: Lamp
+    100006: //RootNode
+    400000: Camera
+    400002: Cube.000
+    400004: Lamp
+    400006: //RootNode
+    2000000: Camera
+    2100000: Material.001
+    4300000: Cube.000
+    7400000: Cube.000|Cube.000Action
+    7400002: Cube.000|IdleAnimation
+    7400004: Cube.000|Transformation
     9500000: //RootNode
-    13700000: Cube
-    2186277476908879412: ImportLogs
+    10800000: Lamp
+    13700000: Cube.000
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -112,7 +71,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
