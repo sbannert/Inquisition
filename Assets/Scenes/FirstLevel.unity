@@ -681,24 +681,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114319370825066762, guid: 59f3cd605b6e2eb47be2aaf6d1d21257,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 351924191}
-    - target: {fileID: 54733100020841660, guid: 59f3cd605b6e2eb47be2aaf6d1d21257,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65510701190633058, guid: 59f3cd605b6e2eb47be2aaf6d1d21257,
-        type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 441caed972dd8e44fbc2874a10bce07b,
-        type: 2}
-    m_RemovedComponents:
-    - {fileID: 54733100020841660, guid: 59f3cd605b6e2eb47be2aaf6d1d21257, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59f3cd605b6e2eb47be2aaf6d1d21257, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1278365970 stripped
@@ -923,8 +906,7 @@ Prefab:
       propertyPath: m_Name
       value: PlatformHead2
       objectReference: {fileID: 0}
-    - target: {fileID: 54733100020841660, guid: 59f3cd605b6e2eb47be2aaf6d1d21257,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
