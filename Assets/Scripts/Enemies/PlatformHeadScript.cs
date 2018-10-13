@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlatformHeadScript : MonoBehaviour {
 
     [SerializeField]
-    Transform player;
-    [SerializeField]
     float shrinkInterval;
     bool hasShrunk;
 
@@ -17,11 +15,11 @@ public class PlatformHeadScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if ((collision.gameObject.name == "Player") && (collision.transform.position.y > transform.position.y) && (hasShrunk))
+        Debug.Log(collision);
+        if ((collision.gameObject.name == "Player") && (collision.transform.position.y > (transform.position.y+1.5f)) && (hasShrunk))
         {
             hasShrunk = false;
             StartCoroutine(DelayTime());
-            
         }
     }
 

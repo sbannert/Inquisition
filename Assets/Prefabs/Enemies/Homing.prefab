@@ -96,9 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba721c4cbc6b91c46b8405860571f7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1711949180403504, guid: 6d5ae20f1af27ec41b04b980e42d8168, type: 2}
-  step: 2
-  moveDelay: 2
+  speed: 2
+  moveDelay: 0
 --- !u!135 &135794310095026498
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -107,7 +106,7 @@ SphereCollider:
   m_GameObject: {fileID: 1408433913671696}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

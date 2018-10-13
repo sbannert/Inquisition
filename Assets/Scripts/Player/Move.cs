@@ -11,6 +11,11 @@ public class Move : MonoBehaviour
     public float glideForce;
     public float jumpTime;
     public float jumpTimeCounter;
+    //animations
+    public Transform idleAnimation;
+    public Transform moveAnimation;
+    public Transform glideAnimation;
+    public Transform jumpAnimation;
     /*this bool is to tell us whether you are on the ground or not
      * the layermask lets you select a layer to be ground; you will need to create a layer named ground(or whatever you like) and assign your
      * ground objects to this layer.
@@ -25,12 +30,15 @@ public class Move : MonoBehaviour
     
     //You will need a rigidbody to apply forces for jumping, in this case I am using Rigidbody 2D because we are trying to emulate Mario :)
     private Rigidbody rb;
-    
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         //sets the jumpCounter to whatever we set our jumptime to in the editor
+        idleAnimation = transform.Find("Square");
+        moveAnimation = transform.Find("Circle");
+        glideAnimation = transform.Find("Plane");
+        jumpAnimation = transform.Find("Star");
         xSpeed = 0.1f;
         jumpForce = 5f;
         glideForce = -0.5f;
@@ -52,29 +60,59 @@ public class Move : MonoBehaviour
         //if we are grounded...
         if (grounded)
         {
+            if (!(Input.GetButton("Jump") || Input.GetButton("Glide") || Input.GetAxis("MovementX") != 0))
+            {
+                rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            }
+            jumpAnimation.gameObject.SetActive(false);
+            idleAnimation.gameObject.SetActive(true);
             //the jumpcounter is whatever we set jumptime to in the editor.
             jumpTimeCounter = jumpTime;
         }
+
         if (Input.GetButtonDown("Jump") && grounded)
         {
+            idleAnimation.gameObject.SetActive(false); //These will be replaced by transitions
+            moveAnimation.gameObject.SetActive(false);
+            glideAnimation.gameObject.SetActive(false);
             start = true;
         }
         if ((Input.GetButton("Jump")) && !stoppedJumping)
         {
+            idleAnimation.gameObject.SetActive(false);
+            moveAnimation.gameObject.SetActive(false);
             mid = true;
         }
         if(Input.GetButtonUp("Jump"))
         {
+            idleAnimation.gameObject.SetActive(false);
             end = true;
         }
         if (Input.GetButton("Glide"))
         {
+            jumpAnimation.gameObject.SetActive(false);
+            moveAnimation.gameObject.SetActive(false);
+            idleAnimation.gameObject.SetActive(false);
             glide = true;
+        }
+        if (Input.GetButton("Glide") == false)
+        {
+            glideAnimation.gameObject.SetActive(false);
+            if (!(grounded))
+            {
+                jumpAnimation.gameObject.SetActive(true);
+            }
         }
         if (Input.GetAxis("MovementX") != 0)
         {
+            idleAnimation.gameObject.SetActive(false);
             move = true;
         }
+        if (!(grounded))
+        {
+            moveAnimation.gameObject.SetActive(false);
+        }
+
     }
 
     public void FixedUpdate()
@@ -83,8 +121,14 @@ public class Move : MonoBehaviour
         {
             if(glide == false || grounded == false)
             {
+                glideAnimation.gameObject.SetActive(false);
                 float moveX = Input.GetAxis("MovementX");
                 Vector3 movingVector = new Vector3(moveX * xSpeed, 0.0f, 0.0f);
+                if (grounded)
+                {
+                    moveAnimation.gameObject.SetActive(true);
+                }
+
                 transform.Translate(movingVector, Space.World);
                 move = false;
             }
@@ -93,7 +137,8 @@ public class Move : MonoBehaviour
         if(start)
         {
             //jump!
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0.0f);
+            rb.velocity = new Vector3(0.0f, jumpForce, 0.0f);
+            jumpAnimation.gameObject.SetActive(true);
             stoppedJumping = false;
             start = false;
         }
@@ -104,7 +149,7 @@ public class Move : MonoBehaviour
             if (jumpTimeCounter > 0)
             {
                 //keep jumping!
-                rb.velocity = new Vector3(rb.velocity.x/4.0f, jumpForce, 0.0f);
+                rb.velocity = new Vector3(0.0f, jumpForce, 0.0f);
                 jumpTimeCounter -= Time.deltaTime;
                 mid = false;
             }
@@ -119,8 +164,18 @@ public class Move : MonoBehaviour
             mid = false;
         }
         if (glide)
-        {
-            rb.velocity = new Vector3(rb.velocity.x * 10.0f, glideForce, 0.0f);
+        {       
+            moveAnimation.gameObject.SetActive(false);
+            glideAnimation.gameObject.SetActive(true);
+            if (Input.GetAxis("MovementX") > 0.0f)
+            {
+                glideAnimation.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
+            }
+            if (Input.GetAxis("MovementX") < 0.0f)
+            {
+                glideAnimation.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
+            }
+            rb.velocity = new Vector3(0.0f, glideForce, 0.0f);
             glide = false;          
         }
     }
