@@ -24,7 +24,7 @@ public class Jump : MonoBehaviour
      * Add an empty game object as a child of your player and position it at your feet, where you touch the ground.
      * the float groundCheckRadius allows you to set a radius for the groundCheck, to adjust the way you interact with the ground*/
     public Transform groundCheck;
-
+    
     //You will need a rigidbody to apply forces for jumping, in this case I am using Rigidbody 2D because we are trying to emulate Mario :)
     private Rigidbody rb;
     
