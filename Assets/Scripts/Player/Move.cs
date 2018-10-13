@@ -35,10 +35,6 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         //sets the jumpCounter to whatever we set our jumptime to in the editor
-        idleAnimation = transform.Find("Square");
-        moveAnimation = transform.Find("Circle");
-        glideAnimation = transform.Find("Plane");
-        jumpAnimation = transform.Find("Star");
         xSpeed = 0.1f;
         jumpForce = 5f;
         glideForce = -0.5f;
@@ -49,6 +45,11 @@ public class Move : MonoBehaviour
         end = false;
         glide = false;
         move = false;
+        jumpAnimation.gameObject.SetActive(false);
+        moveAnimation.gameObject.SetActive(false);
+        glideAnimation.gameObject.SetActive(false);
+        idleAnimation.gameObject.SetActive(true);
+        Debug.Log("loaded");
     }
 
     void Update()
