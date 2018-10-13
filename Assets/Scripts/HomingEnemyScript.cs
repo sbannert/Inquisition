@@ -24,7 +24,7 @@ public class HomingEnemyScript : MonoBehaviour {
 
     private IEnumerator DelayTime()
     {
-        yield return new WaitForSeconds(moveSpeed);
+        yield return new WaitForSeconds(moveDelay);
         transform.position = Vector3.MoveTowards(transform.position, tempPlayer.transform.position, 3);  //This is the movement to be changed
 
     }

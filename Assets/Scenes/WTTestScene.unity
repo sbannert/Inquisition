@@ -724,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1244612834}
   step: 3
+  moveSpeed: 3
 --- !u!135 &1866415188
 SphereCollider:
   m_ObjectHideFlags: 0
