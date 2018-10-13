@@ -23,10 +23,8 @@ public class Jump : MonoBehaviour
     /*the public transform is how you will detect whether we are touching the ground.
      * Add an empty game object as a child of your player and position it at your feet, where you touch the ground.
      * the float groundCheckRadius allows you to set a radius for the groundCheck, to adjust the way you interact with the ground*/
-
     public Transform groundCheck;
-    public float groundCheckRadius;
-
+    
     //You will need a rigidbody to apply forces for jumping, in this case I am using Rigidbody 2D because we are trying to emulate Mario :)
     private Rigidbody rb;
     
@@ -44,7 +42,7 @@ public class Jump : MonoBehaviour
     void Update()
     {
         //determines whether our bool, grounded, is true or false by seeing if our groundcheck overlaps something on the ground layer
-        grounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, whatIsGround);
+        grounded = Physics.CheckBox(groundCheck.position, groundCheck.localScale, groundCheck.rotation, whatIsGround);
 
 
         //if we are grounded...
@@ -53,7 +51,7 @@ public class Jump : MonoBehaviour
             //the jumpcounter is whatever we set jumptime to in the editor.
             jumpTimeCounter = jumpTime;
         }
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             start = true;
         }
@@ -74,14 +72,10 @@ public class Jump : MonoBehaviour
         //if you press down the mouse button...
         if(start)
         {
-            //and you are on the ground...
-            if (grounded)
-            {
-                //jump!
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0.0f);
-                stoppedJumping = false;
-                start = false;
-            }
+            //jump!
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0.0f);
+            stoppedJumping = false;
+            start = false;
         }
 
         //if you keep holding down the mouse button...
@@ -91,7 +85,7 @@ public class Jump : MonoBehaviour
             if (jumpTimeCounter > 0)
             {
                 //keep jumping!
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0.0f);
+                rb.velocity = new Vector3(rb.velocity.x/4.0f, jumpForce, 0.0f);
                 jumpTimeCounter -= Time.deltaTime;
                 mid = false;
             }
