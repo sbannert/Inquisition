@@ -35,10 +35,6 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         //sets the jumpCounter to whatever we set our jumptime to in the editor
-        idleAnimation = transform.Find("Square");
-        moveAnimation = transform.Find("Circle");
-        glideAnimation = transform.Find("Plane");
-        jumpAnimation = transform.Find("Star");
         xSpeed = 0.1f;
         jumpForce = 5f;
         glideForce = -0.5f;
@@ -49,12 +45,17 @@ public class Move : MonoBehaviour
         end = false;
         glide = false;
         move = false;
+        jumpAnimation.gameObject.SetActive(false);
+        moveAnimation.gameObject.SetActive(false);
+        glideAnimation.gameObject.SetActive(false);
+        idleAnimation.gameObject.SetActive(true);
+        Debug.Log("loaded");
     }
 
     void Update()
     {
         //determines whether our bool, grounded, is true or false by seeing if our groundcheck overlaps something on the ground layer
-        grounded = Physics.CheckBox(groundCheck.position, new Vector3(0.47f, 0.01f, 0.9f), new Quaternion(0f, 0f, 0f, 0f), whatIsGround);
+        grounded = Physics.CheckBox(groundCheck.position, new Vector3(0.47f, 0.1f, 0.9f), new Quaternion(0f, 0f, 0f, 0f), whatIsGround);
 
 
         //if we are grounded...

@@ -1,38 +1,43 @@
 fileFormatVersion: 2
-guid: b9f1ca807eb03f746a54df9aa399b3b2
+guid: 6b3f05e330b680147b15f32102c66a49
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: Bone
-    100004: Bone_end
-    100006: Camera
-    100008: //RootNode
-    100010: Cylinder.001
-    100012: Lamp
+    100004: Bone.001
+    100006: Bone.001_end
+    100008: Bone.003
+    100010: Bone.003_end
+    100012: Bone.004
+    100014: Bone.004_end
+    100016: Bone.005
+    100018: Bone.005_end
+    100020: Camera
+    100022: Cube.000
+    100024: Lamp
+    100026: //RootNode
     400000: Armature
     400002: Bone
-    400004: Bone_end
-    400006: Camera
-    400008: //RootNode
-    400010: Cylinder.001
-    400012: Lamp
+    400004: Bone.001
+    400006: Bone.001_end
+    400008: Bone.003
+    400010: Bone.003_end
+    400012: Bone.004
+    400014: Bone.004_end
+    400016: Bone.005
+    400018: Bone.005_end
+    400020: Camera
+    400022: Cube.000
+    400024: Lamp
+    400026: //RootNode
     2000000: Camera
-    2100000: No Name
-    4300000: Cylinder.001
-    7400000: Armature|Moving
-    7400002: Armature|Transformation
-    7400004: Armature|Transformation.001
-    7400006: Armature|Transformation.003
-    7400008: Armature|Untitled
-    7400010: Cylinder.001|Moving
-    7400012: Cylinder.001|Transformation
-    7400014: Cylinder.001|Transformation.001
-    7400016: Cylinder.001|Transformation.003
-    7400018: Cylinder.001|Untitled
+    2100000: Material.001
+    4300000: Cube.000
+    7400000: Armature|IdleAnimation
     9500000: //RootNode
     10800000: Lamp
-    13700000: Cylinder.001
+    13700000: Cube.000
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,35 +65,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Cylinder.001|Transformation
-      takeName: Cylinder.001|Transformation
-      firstFrame: 0
-      lastFrame: 3
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

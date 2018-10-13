@@ -24,11 +24,11 @@ public class PlatformHeadScript : MonoBehaviour {
 
     private IEnumerator DelayTime()
     {
-        for (int i = 0; i < 200; i++)
+        for (int i = 0; i < 400; i++)
         {
             yield return new WaitForSeconds(shrinkInterval);
             //transform.localScale -= new Vector3(0, 0.01f, 0);
-            transform.localPosition -= new Vector3(0, 0.01f, 0);
+            transform.localPosition -= new Vector3(0, 0.005f, 0);
         }
     }
 

@@ -1,23 +1,18 @@
 fileFormatVersion: 2
-guid: b9f1ca807eb03f746a54df9aa399b3b2
+guid: 5067281ceb715814f9ede5e70b95e03b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
     100002: Bone
     100004: Bone_end
-    100006: Camera
-    100008: //RootNode
-    100010: Cylinder.001
-    100012: Lamp
+    100006: //RootNode
+    100008: Cylinder.001
     400000: Armature
     400002: Bone
     400004: Bone_end
-    400006: Camera
-    400008: //RootNode
-    400010: Cylinder.001
-    400012: Lamp
-    2000000: Camera
+    400006: //RootNode
+    400008: Cylinder.001
     2100000: No Name
     4300000: Cylinder.001
     7400000: Armature|Moving
@@ -31,7 +26,6 @@ ModelImporter:
     7400016: Cylinder.001|Transformation.003
     7400018: Cylinder.001|Untitled
     9500000: //RootNode
-    10800000: Lamp
     13700000: Cylinder.001
   externalObjects: {}
   materials:
@@ -62,10 +56,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cylinder.001|Transformation
-      takeName: Cylinder.001|Transformation
+      name: Armature|Moving
+      takeName: Armature|Moving
       firstFrame: 0
-      lastFrame: 3
+      lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
