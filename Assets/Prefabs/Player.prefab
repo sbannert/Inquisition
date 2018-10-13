@@ -40,8 +40,6 @@ GameObject:
   - component: {fileID: 33522889973161026}
   - component: {fileID: 23906905242431350}
   - component: {fileID: 65346784372453506}
-  - component: {fileID: 114143569914459466}
-  - component: {fileID: 114697817392739826}
   - component: {fileID: 54789335585317532}
   - component: {fileID: 114854778164478510}
   - component: {fileID: 114694432014107942}
@@ -202,17 +200,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114143569914459466
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711949180403504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdddb9009262254ba9abcfecec77be0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114694432014107942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,30 +211,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5433b1ec2696045b7a3fabf8c9b197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 0
   jumpForce: 0
+  glideForce: 0
   jumpTime: 0
   jumpTimeCounter: 0
   grounded: 0
+  move: 0
   start: 0
   mid: 0
   end: 0
+  glide: 0
+  stoppedJumping: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
-  stoppedJumping: 0
   groundCheck: {fileID: 0}
---- !u!114 &114697817392739826
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711949180403504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773eee39e415c0948a4646660d801921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &114854778164478510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,15 +238,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5433b1ec2696045b7a3fabf8c9b197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 0
   jumpForce: 5
+  glideForce: 0
   jumpTime: 0.4
   jumpTimeCounter: 0
   grounded: 0
+  move: 0
   start: 0
   mid: 0
   end: 0
+  glide: 0
+  stoppedJumping: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  stoppedJumping: 0
   groundCheck: {fileID: 4541656814802006}

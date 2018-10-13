@@ -10,12 +10,15 @@ public class ShockWaveScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 vect = new Vector3(1, 0, 0);
         transform.Translate(Vector3.left * Time.deltaTime * speed);
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if(collision.gameObject.name == "Player")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        Destroy(gameObject);
     }
 }
