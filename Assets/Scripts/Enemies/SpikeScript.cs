@@ -9,6 +9,7 @@ public class SpikeScript : MonoBehaviour
     SpikeTowerScript spikeTow;
     [SerializeField]
     float spikeDuration;
+    GameObject mom;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -27,7 +28,8 @@ public class SpikeScript : MonoBehaviour
     private IEnumerator StartDestroy()
     {
         yield return new WaitForSeconds(spikeDuration);
-        spikeTow.StartSpike();
+        spikeTow = gameObject.GetComponentInParent<SpikeTowerScript>();
+            spikeTow.StartSpike();
         Destroy(gameObject);
     }
 }
