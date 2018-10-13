@@ -8,7 +8,6 @@ public class Move : MonoBehaviour {
     [SerializeField]
     float speed = 10f;
     float go = 1f;
-
     // Update is called once per frame
     void Update ()
     {
@@ -19,7 +18,6 @@ public class Move : MonoBehaviour {
     {
         Vector3 movingVector = new Vector3(moveX, 0.0f, 0.0f);
         movingVector *= go;
-
         transform.Translate(movingVector, Space.World);
     }
 }
