@@ -36,6 +36,8 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         //sets the jumpCounter to whatever we set our jumptime to in the editor
+        //not sure why you have this, it's never used
+        idleAnimation = GetComponent<Animation>();
         xSpeed = 0.1f;
         jumpForce = 5f;
         glideForce = -0.5f;
@@ -49,7 +51,9 @@ public class Move : MonoBehaviour
         jumpAnimation.gameObject.SetActive(false);
         moveAnimation.gameObject.SetActive(false);
         glideAnimation.gameObject.SetActive(false);
-        idleAnimation.gameObject.SetActive(true);
+        
+        idle.SetActive(true);
+        idleAnimation.Play("Armature|IdleAnimation");
         Debug.Log("loaded");
     }
 
@@ -67,7 +71,7 @@ public class Move : MonoBehaviour
                 rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             }
             jumpAnimation.gameObject.SetActive(false);
-            idleAnimation.gameObject.SetActive(true);
+            
             //the jumpcounter is whatever we set jumptime to in the editor.
             jumpTimeCounter = jumpTime;
         }
