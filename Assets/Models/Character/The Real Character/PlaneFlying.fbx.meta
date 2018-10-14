@@ -1,43 +1,28 @@
 fileFormatVersion: 2
-guid: 6b3f05e330b680147b15f32102c66a49
+guid: c3ad08f7dfda7e9468e8b014f01443b4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
-    100002: Bone
-    100004: Bone.001
-    100006: Bone.001_end
-    100008: Bone.003
-    100010: Bone.003_end
-    100012: Bone.004
-    100014: Bone.004_end
-    100016: Bone.005
-    100018: Bone.005_end
-    100020: Camera
-    100022: Cube.000
-    100024: Lamp
-    100026: //RootNode
-    400000: Armature
-    400002: Bone
-    400004: Bone.001
-    400006: Bone.001_end
-    400008: Bone.003
-    400010: Bone.003_end
-    400012: Bone.004
-    400014: Bone.004_end
-    400016: Bone.005
-    400018: Bone.005_end
-    400020: Camera
-    400022: Cube.000
-    400024: Lamp
-    400026: //RootNode
-    2000000: Camera
-    2100000: Material.001
-    4300000: Cube.000
-    7400000: Armature|IdleAnimation
+    100000: //RootNode
+    400000: //RootNode
+    2100000: No Name
+    4300000: Plane
+    7400000: Plane|Circle
+    7400002: Plane|Circle.002
+    7400004: Plane|Circle.004
+    7400006: Plane|Cube.004Action.003
+    7400008: Plane|Flying
+    7400010: Plane|Plane
+    7400012: Plane|PlaneAction
+    7400014: Plane|PlaneAction.001
+    7400016: Plane|Spring
+    7400018: Plane|Spring.001
+    7400020: Plane|Spring.003
+    7400022: Plane|Spring.004
+    7400024: Plane|Spring.006
+    7400026: Plane|Spring.007
     9500000: //RootNode
-    10800000: Lamp
-    13700000: Cube.000
+    13700000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,13 +54,13 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
