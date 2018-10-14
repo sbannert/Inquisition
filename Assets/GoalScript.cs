@@ -3,27 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoalScript : MonoBehaviour {
-
-    [SerializeField]
-    string sceneChange;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Player")
+public class GoalScript : MonoBehaviour
+{
+    void OnTriggerStay(Collider other)
+    {       
+        if (other.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetSceneByName(sceneChange).buildIndex);
-            Debug.Log("Course Cleared");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
