@@ -15,14 +15,14 @@ public class ShockWaveScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
         if(collision.gameObject.name == "Player")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        if(collision.gameObject.name == "Wall")
+        /*if(collision.gameObject.name == "Floor")
         {
+            Debug.Log("collided with obstacle");
             Destroy(gameObject);
-        }
+        }*/
     }
 }

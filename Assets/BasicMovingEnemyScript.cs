@@ -7,11 +7,15 @@ public class BasicMovingEnemyScript : MonoBehaviour {
     private Rigidbody rb;
     [SerializeField]
     float speed;
+    [SerializeField]
+    string obstacle1;
+    [SerializeField]
+    string obstacle2;
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        speed = -2;
+        //speed = -2;
     }
 
     private void FixedUpdate()
@@ -26,9 +30,13 @@ public class BasicMovingEnemyScript : MonoBehaviour {
 	}
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Floor10")
+        if (collision.gameObject.name == obstacle1)
         {
-            speed = 2;
+            speed = speed * -1;
+        }
+        if (collision.gameObject.name == obstacle2)
+        {
+            speed = speed * -1;
         }
         if (collision.gameObject.name == "Player")
         {

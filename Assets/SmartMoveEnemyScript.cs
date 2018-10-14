@@ -8,6 +8,10 @@ public class SmartMoveEnemyScript : MonoBehaviour
     private Rigidbody rb;
     [SerializeField]
     float speed;
+    [SerializeField]
+    float left;
+    [SerializeField]
+    float right;
     // Use this for initialization
     void Start()
     {
@@ -31,11 +35,11 @@ public class SmartMoveEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.position.x > 19.0f)
+        if (rb.position.x > right)
         {
             speed = speed * -1;
         }
-        if (rb.position.x < 13.0f)
+        if (rb.position.x < left)
         {
             speed = speed * -1;
         }

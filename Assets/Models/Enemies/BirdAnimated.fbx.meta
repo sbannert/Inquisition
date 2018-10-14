@@ -1,38 +1,58 @@
 fileFormatVersion: 2
-guid: b9f1ca807eb03f746a54df9aa399b3b2
+guid: d6f6f943e7164b54bab96882c953228b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Armature
-    100002: Bone
-    100004: Bone_end
-    100006: Camera
-    100008: //RootNode
-    100010: Cylinder.001
-    100012: Lamp
+    100002: //RootNode
+    100004: Bone
+    100006: Bone.001
+    100008: Bone.001_end
+    100010: Bone.002
+    100012: Bone.002_end
+    100014: Bone.003
+    100016: Bone.004
+    100018: Bone.004_end
+    100020: Bone.005
+    100022: Bone.006
+    100024: Bone.006_end
+    100026: Bone.007
+    100028: Bone.007_end
+    100030: Bone.008
+    100032: Bone.008_end
+    100034: Cube
+    100036: Wing
+    100038: Wing.001
+    100040: Wing.001_end
+    100042: Wing_end
     400000: Armature
-    400002: Bone
-    400004: Bone_end
-    400006: Camera
-    400008: //RootNode
-    400010: Cylinder.001
-    400012: Lamp
-    2000000: Camera
-    2100000: No Name
-    4300000: Cylinder.001
-    7400000: Armature|Moving
-    7400002: Armature|Transformation
-    7400004: Armature|Transformation.001
-    7400006: Armature|Transformation.003
-    7400008: Armature|Untitled
-    7400010: Cylinder.001|Moving
-    7400012: Cylinder.001|Transformation
-    7400014: Cylinder.001|Transformation.001
-    7400016: Cylinder.001|Transformation.003
-    7400018: Cylinder.001|Untitled
+    400002: //RootNode
+    400004: Bone
+    400006: Bone.001
+    400008: Bone.001_end
+    400010: Bone.002
+    400012: Bone.002_end
+    400014: Bone.003
+    400016: Bone.004
+    400018: Bone.004_end
+    400020: Bone.005
+    400022: Bone.006
+    400024: Bone.006_end
+    400026: Bone.007
+    400028: Bone.007_end
+    400030: Bone.008
+    400032: Bone.008_end
+    400034: Cube
+    400036: Wing
+    400038: Wing.001
+    400040: Wing.001_end
+    400042: Wing_end
+    2100000: Material
+    4300000: Cube
+    7400000: Armature|Flying
+    7400002: Armature|Homing
     9500000: //RootNode
-    10800000: Lamp
-    13700000: Cylinder.001
+    13700000: Cube
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -60,35 +80,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Cylinder.001|Transformation
-      takeName: Cylinder.001|Transformation
-      firstFrame: 0
-      lastFrame: 3
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

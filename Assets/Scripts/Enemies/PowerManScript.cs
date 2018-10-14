@@ -8,6 +8,7 @@ public class PowerManScript : MonoBehaviour {
     float waveTimer;
     [SerializeField]
     GameObject wave;
+
     Vector3 vectLocation;
     int count;
 
