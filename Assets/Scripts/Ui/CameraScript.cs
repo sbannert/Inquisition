@@ -10,7 +10,7 @@ public class CameraScript : MonoBehaviour {
 
     private void LateUpdate()
     {
-        offset = new Vector3(player.transform.position.x, player.transform.position.y+3, player.transform.position.z - 10);
+        offset = new Vector3(player.transform.position.x, player.transform.position.y+2, player.transform.position.z - 12);
         transform.position = offset;
     }
 }
